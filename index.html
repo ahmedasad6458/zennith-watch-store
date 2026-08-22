@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Zennith — premium watches with timeless design.">
+  <title>Zennith Watches | Timeless Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"><img src="assets/logo.jpeg" alt="Zennith logo"></a>
+  <nav id="navLinks">
+    <a href="#home">Home</a><a href="#collection">Collection</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+    <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">ZENNITH • EST. 2026</span>
+    <h1>Timeless design.<br><em>Modern precision.</em></h1>
+    <p>Discover refined timepieces made to elevate every moment.</p>
+    <div class="hero-buttons"><a class="btn primary" href="#collection">Shop Collection</a><a class="btn ghost" href="#about">Our Story</a></div>
+  </div>
+  <div class="hero-watch">
+    <div class="glow"></div>
+    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=85" alt="Premium Zennith watch">
+  </div>
+</section>
+
+<section class="section trust">
+  <div><b>01</b><span>Premium Quality</span></div><div><b>02</b><span>Elegant Design</span></div><div><b>03</b><span>Reliable Movement</span></div><div><b>04</b><span>1 Year Warranty</span></div>
+</section>
+
+<section id="collection" class="section">
+  <div class="section-head"><div><span class="eyebrow">THE COLLECTION</span><h2>Made to be remembered.</h2></div><button class="text-btn" id="showAll">View all →</button></div>
+  <div class="products" id="products"></div>
+</section>
+
+<section id="about" class="section about">
+  <div class="about-image"><img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85" alt="Zennith watch detail"></div>
+  <div><span class="eyebrow">OUR STORY</span><h2>Precision with personality.</h2><p>Zennith was created for people who appreciate quiet confidence. Every design balances clean proportions, dependable movement and a timeless silhouette.</p><p>Our goal is simple: make a watch that feels right today and still looks right years from now.</p><a class="btn primary" href="#contact">Talk to Zennith</a></div>
+</section>
+
+<section class="section reviews">
+  <div class="section-head"><div><span class="eyebrow">CUSTOMER LOVE</span><h2>Worn with confidence.</h2></div></div>
+  <div class="review-grid">
+    <article><div class="stars">★★★★★</div><p>“The finishing looks far more premium than I expected. Absolutely love it.”</p><b>— Hamza R.</b></article>
+    <article><div class="stars">★★★★★</div><p>“Clean, comfortable and elegant. It works with both casual and formal outfits.”</p><b>— Ayesha K.</b></article>
+    <article><div class="stars">★★★★★</div><p>“Beautiful packaging and a really sharp dial. Great first impression.”</p><b>— Ali M.</b></article>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div><span class="eyebrow">GET IN TOUCH</span><h2>Find your perfect watch.</h2><p>Have a question about a timepiece or an order? Send us a message.</p><div class="contact-info"><span>✉ hello@zennithwatches.com</span><span>◉ +92 300 0000000</span></div></div>
+  <form id="contactForm"><input required placeholder="Your name"><input type="email" required placeholder="Email address"><textarea required rows="5" placeholder="Your message"></textarea><button class="btn primary" type="submit">Send Message</button></form>
+</section>
+</main>
+
+<footer><div class="footer-brand"><img src="assets/logo.jpeg" alt="Zennith"><p>Timeless watches for modern lives.</p></div><div class="footer-links"><a href="#collection">Collection</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#" id="adminLink">Admin</a></div><small>© 2026 Zennith Watches. All rights reserved.</small></footer>
+
+<div class="drawer" id="cartDrawer"><div class="drawer-panel"><div class="drawer-head"><h3>Your Cart</h3><button id="closeCart">×</button></div><div id="cartItems"></div><div class="cart-total"><span>Total</span><b id="cartTotal">Rs. 0</b></div><button class="btn primary wide" id="checkoutBtn">Checkout</button></div></div>
+
+<div class="modal" id="productModal"><div class="modal-card"><button class="modal-close" data-close>×</button><img id="modalImg" alt=""><div class="modal-info"><span class="eyebrow">ZENNITH TIMEPIECE</span><h2 id="modalName"></h2><b id="modalPrice"></b><p id="modalDesc"></p><div id="modalSpecs" class="specs"></div><button class="btn primary wide" id="modalAdd">Add to Cart</button></div></div></div>
+
+<div class="modal" id="checkoutModal"><div class="modal-card checkout"><button class="modal-close" data-close>×</button><div class="modal-info"><span class="eyebrow">SECURE CHECKOUT</span><h2>Complete your order</h2><form id="checkoutForm"><input required placeholder="Full name"><input required type="email" placeholder="Email"><input required placeholder="Phone"><input required placeholder="Delivery address"><input required placeholder="City"><select id="paymentMethod"><option value="gateway">Online Payment — Gateway</option><option value="cod">Cash on Delivery</option></select><div class="payment-note">Online payment is shown as a demo gateway for this assignment. Real gateway credentials/API must be connected before accepting live payments.</div><button class="btn primary wide" type="submit">Place Order</button></form></div></div></div>
+
+<div class="modal" id="adminModal"><div class="modal-card admin"><button class="modal-close" data-close>×</button><div class="modal-info"><span class="eyebrow">PRIVATE AREA</span><h2>Admin Panel</h2><p class="muted">Demo assignment panel. For production, protect this route with server-side authentication.</p><div class="admin-grid"><div><b id="adminOrders">0</b><span>Orders</span></div><div><b id="adminSales">Rs. 0</b><span>Sales</span></div><div><b>6</b><span>Products</span></div></div><button class="btn primary wide" id="adminClose">Close</button></div></div></div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
